@@ -1,17 +1,16 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import { api } from '@/lib/api';
 import { Account } from '@/types/account';
 
-
-
 import AccountCard from '@/components/AccountCard';
 import { AppSidebar } from '../../components/ui/app-sidebar'
-import { DataTable } from "@/components/ui/data-table-test"
-
 import { SiteHeader } from '../../components/ui/site-header'
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
 import { SectionCards } from '@/components/ui/section-cards'
+
+import { DataTable } from "@/components/ui/data-table-test"
 
 import data from "./data.json"
 

@@ -1,8 +1,18 @@
 'use client';
 import { useEffect, useState } from 'react';
-import AccountCard from '@/components/AccountCard';
+
 import { api } from '@/lib/api';
 import { Account } from '@/types/account';
+
+
+
+import AccountCard from '@/components/AccountCard';
+import { AppSidebar } from '../../components/ui/app-sidebar'
+
+import { SiteHeader } from '../../components/ui/site-header'
+import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
+
+
 
 export default function Dashboard() {
   const [accounts, setAccounts] = useState<Account[]>([]);
@@ -27,6 +37,20 @@ export default function Dashboard() {
           <AccountCard key={account.id} account={account} />
         ))}
       </div>
+
+    <SidebarProvider>
+      <AppSidebar variant="inset" />
+      <SidebarInset>
+        <SiteHeader />
+        <div className="flex flex-1 flex-col">
+          <div className="@container/main flex flex-1 flex-col gap-2">
+            <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+              
+            </div>
+          </div>
+        </div>
+      </SidebarInset>
+    </SidebarProvider>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import {  ArrowUpCircleIcon,  BarChartIcon,  CameraIcon, ClipboardListIcon,  DatabaseIcon,  FileCodeIcon,  FileIcon, FileTextIcon, FolderIcon,  HelpCircleIcon,   LayoutDashboardIcon,  ListIcon,  SearchIcon,  SettingsIcon,  UsersIcon,} from "lucide-react"
+import {  ArrowUpCircleIcon, ArrowRightLeftIcon,  BarChartIcon,  BitcoinIcon, CameraIcon, ClipboardListIcon,  DatabaseIcon,  FileCodeIcon,  FileIcon, FileTextIcon, FolderIcon,  HelpCircleIcon,   LayoutDashboardIcon,  ListIcon,  SearchIcon,  SettingsIcon,  UsersIcon,} from "lucide-react"
 
 import { NavDocuments } from '@/components/ui/nav-documents'
 import { NavMain } from '@/components/ui/nav-main'
@@ -19,9 +19,9 @@ import {
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "Justin Bucsa",
+    email: "Justin.Bucsa@gmail.com",
+    avatar: "../../images/avatars/AvatarImage.jpg",
   },
   navMain: [
     {
@@ -30,22 +30,27 @@ const data = {
       icon: LayoutDashboardIcon,
     },
     {
-      title: "Lifecycle",
+      title: "Banking",
       url: "#",
       icon: ListIcon,
     },
     {
-      title: "Analytics",
+      title: "Investments",
       url: "#",
       icon: BarChartIcon,
     },
     {
-      title: "Projects",
+      title: "Account Transfers",
       url: "#",
-      icon: FolderIcon,
+      icon: ArrowRightLeftIcon,
     },
     {
-      title: "Team",
+      title: "Crypto Currency",
+      url: "#",
+      icon: BitcoinIcon,
+    },
+    {
+      title: "Agents",
       url: "#",
       icon: UsersIcon,
     },
@@ -127,7 +132,7 @@ const data = {
       icon: ClipboardListIcon,
     },
     {
-      name: "Word Assistant",
+      name: "Documents",
       url: "#",
       icon: FileIcon,
     },
@@ -145,8 +150,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
               <a href="#">
-                <ArrowUpCircleIcon className="h-5 w-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>

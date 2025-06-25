@@ -118,6 +118,14 @@ SESSION_COOKIE_SECURE = False  # True in production with HTTPS
 SESSION_COOKIE_HTTPONLY = True
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
+# Set settings are used to run the Node.js Frontend
+CORS_ALLOWED_ORIGINS = [
+  "http://localhost:3000",
+  "https://your-production-domain.com"
+]
+CORS_ALLOW_CREDENTIALS = True
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
